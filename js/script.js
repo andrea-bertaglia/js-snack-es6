@@ -1,6 +1,8 @@
 // test
 console.log("test OK");
 
+// SNACK 1
+
 // Creazione dell'array di oggetti bicicletta
 const bikeArray = [
   {
@@ -52,3 +54,46 @@ paragraphElem.innerText = `
     La bici con peso inferiore è: ${lowerBikeName} con peso di ${lowerBikeWeight} Kg
 `;
 bodyElem.append(paragraphElem);
+
+// SNACK 2
+
+const footballTeams = [
+  {
+    teamName: "Juventus",
+    teamPoints: 0,
+    teamFouls: 0,
+  },
+  {
+    teamName: "Milan",
+    teamPoints: 0,
+    teamFouls: 0,
+  },
+  {
+    teamName: "Inter",
+    teamPoints: 0,
+    teamFouls: 0,
+  },
+  {
+    teamName: "Roma",
+    teamPoints: 0,
+    teamFouls: 0,
+  },
+  {
+    teamName: "Napoli",
+    teamPoints: 0,
+    teamFouls: 0,
+  },
+];
+
+let footballTeamsCopy = [...footballTeams];
+
+footballTeamsCopy.forEach((element) => {
+  const randomPoints = Math.floor(Math.random() * 50) + 1;
+  const randomFouls = Math.floor(Math.random() * 20) + 1;
+
+  element.teamPoints = randomPoints;
+  element.teamFouls = randomFouls;
+});
+
+console.log("array originale:", footballTeams);
+console.log("array copia:", footballTeamsCopy);
