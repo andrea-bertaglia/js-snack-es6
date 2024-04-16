@@ -14,5 +14,30 @@ const automobili = [
   { marca: "Opel", modello: "Corsa", alimentazione: "gpl" },
 ];
 
-const newArrayBenzina = automobili.filter(automobili.alimentazione);
-console.log(newArrayBenzina);
+let newArray1 = [];
+let newArray2 = [];
+let newArray3 = [];
+
+for (let i = 0; i < automobili.length; i++) {
+  if (automobili[i].alimentazione === "benzina") {
+    newArray1.push(automobili[i]);
+  }
+}
+console.log(newArray1);
+
+for (let i = 0; i < automobili.length; i++) {
+  if (automobili[i].alimentazione === "diesel") {
+    newArray2.push(automobili[i]);
+  }
+}
+console.log(newArray2);
+
+for (let i = 0; i < automobili.length; i++) {
+  if (
+    automobili[i].alimentazione !== "benzina" &&
+    automobili[i].alimentazione !== "diesel"
+  ) {
+    newArray3.push(automobili[i]);
+  }
+}
+console.log(newArray3);
